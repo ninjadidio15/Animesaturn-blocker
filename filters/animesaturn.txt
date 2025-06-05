@@ -8,53 +8,49 @@
 ! ===========================
 ! Element hiding (existing)
 ! ===========================
-anisaturn.com,animesaturn.cx,animesaturn.co,animesaturn.in,animesaturn.cc,animesaturn.com##.immagine-destra
-anisaturn.com,animesaturn.cx,animesaturn.co,animesaturn.in,animesaturn.cc,animesaturn.com##.alert.alert-danger
-anisaturn.com,animesaturn.cx,animesaturn.co,animesaturn.in,animesaturn.cc,animesaturn.com##.row.pt-2.pb-2
-anisaturn.com,animesaturn.cx,animesaturn.co,animesaturn.in,animesaturn.cc,animesaturn.com##.alert.alert-saturn
-anisaturn.com,animesaturn.cx,animesaturn.co,animesaturn.in,animesaturn.cc,animesaturn.com###footerdivfixed
-anisaturn.com,animesaturn.cx,animesaturn.co,animesaturn.in,animesaturn.cc,animesaturn.com##html > div[style*="pointer-events: none;"][style*="position: absolute"]
+animesaturn.cx##.immagine-destra
+animesaturn.cx##.alert.alert-danger
+animesaturn.cx##.row.pt-2.pb-2
+animesaturn.cx##.alert.alert-saturn
+animesaturn.cx###footerdivfixed
+animesaturn.cx##html > div[style*="pointer-events: none;"][style*="position: absolute"]
 
 ! ======================================
 ! Pop-up / script blocking (existing)
 ! ======================================
-||anisaturn.com^$popup
 ||animesaturn.cx^$popup
-||animesaturn.co^$popup
-||animesaturn.in^$popup
-||animesaturn.cc^$popup
 
 ! ======================================
 ! New rules to neutralize the obfuscated JS
 ! ======================================
 
-anisaturn.com,animesaturn.cx,animesaturn.co,animesaturn.in,animesaturn.cc,animesaturn.com##script:contains(function\(lczxsusin\))
+! Block inline scripts containing known obfuscation markers
+animesaturn.cx##script:contains(function\(lczxsusin\))
+animesaturn.cx##script:contains(c.#i6M)
 
-anisaturn.com,animesaturn.cx,animesaturn.co,animesaturn.in,animesaturn.cc,animesaturn.com##script:contains(c.#i6M)
+! Block specific obfuscated JS files by substring
+||animesaturn.cx/*lrsazoxuowrudef*^$script
+||animesaturn.cx/*bdqrqfot*^$script
 
-||*anisaturn.com*/*lrsazoxuowrudef*^$script
-||*anisaturn.com*/*bdqrqfot*^$script
-||*animesaturn.cx*/*lrsazoxuowrudef*^$script
-||*animesaturn.cx*/*bdqrqfot*^$script
-||*animesaturn.co*/*lrsazoxuowrudef*^$script
-||*animesaturn.co*/*bdqrqfot*^$script
-||*animesaturn.in*/*lrsazoxuowrudef*^$script
-||*animesaturn.in*/*bdqrqfot*^$script
-||*animesaturn.cc*/*lrsazoxuowrudef*^$script
-||*animesaturn.cc*/*bdqrqfot*^$script
+! Block popup scripts with obfuscated names
+||animesaturn.cx/*otdayq*^$popup
+||animesaturn.cx/*fuyqlazq*^$popup
 
-||*anisaturn.com*/*otdayq*^$popup
-||*animesaturn.cx*/*otdayq*^$popup
-||*animesaturn.co*/*otdayq*^$popup
-||*animesaturn.in*/*otdayq*^$popup
-||*animesaturn.cc*/*otdayq*^$popup
-||*anisaturn.com*/*fuyqlazq*^$popup
-||*animesaturn.cx*/*fuyqlazq*^$popup
-||*animesaturn.co*/*fuyqlazq*^$popup
-||*animesaturn.in*/*fuyqlazq*^$popup
-||*animesaturn.cc*/*fuyqlazq*^$popup
+! Block known iframes and overlays
+animesaturn.cx##iframe[src*="oxuow"]
+animesaturn.cx##iframe[src*="eodubf"]
+animesaturn.cx##div[class*="overlay"]
+animesaturn.cx##div[class*="popunder"]
 
-anisaturn.com,animesaturn.cx,animesaturn.co,animesaturn.in,animesaturn.cc,animesaturn.com##iframe[src*="oxuow"]
-anisaturn.com,animesaturn.cx,animesaturn.co,animesaturn.in,animesaturn.cc,animesaturn.com##iframe[src*="eodubf"]
-anisaturn.com,animesaturn.cx,animesaturn.co,animesaturn.in,animesaturn.cc,animesaturn.com##div[class*="overlay"]
-anisaturn.com,animesaturn.cx,animesaturn.co,animesaturn.in,animesaturn.cc,animesaturn.com##div[class*="popunder"]
+! ======================================
+! External script hosts (new)
+! ======================================
+
+! Block any script coming from ccg90.com (and similar numeric paths)
+||ccg90.com^$script,popup
+
+! ======================================
+! Generic ad‐domain blocking (simplified)
+! ======================================
+! Block any request to domains beginning with “ad” and ending in “.com”
+||ad*.com^$script,popup

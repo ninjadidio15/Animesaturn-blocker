@@ -10,6 +10,7 @@ anisaturn.com,animesaturn.cx,animesaturn.co,animesaturn.in,animesaturn.cc,animes
 anisaturn.com,animesaturn.cx,animesaturn.co,animesaturn.in,animesaturn.cc,animesaturn.com##.row.pt-2.pb-2
 anisaturn.com,animesaturn.cx,animesaturn.co,animesaturn.in,animesaturn.cc,animesaturn.com##.alert.alert-saturn
 anisaturn.com,animesaturn.cx,animesaturn.co,animesaturn.in,animesaturn.cc,animesaturn.com###footerdivfixed
+anisaturn.com,animesaturn.cx,animesaturn.co,animesaturn.in,animesaturn.cc,animesaturn.com##html > div[style*="pointer-events: none;"][style*="position: absolute"]
 
 ||anisaturn.com^$popup
 ||animesaturn.cx^$popup

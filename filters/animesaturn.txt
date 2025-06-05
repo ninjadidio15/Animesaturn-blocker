@@ -14,6 +14,7 @@ animesaturn.cx##.row.pt-2.pb-2
 animesaturn.cx##.alert.alert-saturn
 animesaturn.cx###footerdivfixed
 animesaturn.cx##html > div[style*="pointer-events: none;"][style*="position: absolute"]
+animesaturn.cx##div[style*="z-index: 2147483647"][style*="pointer-events: auto"]
 
 ! ======================================
 ! Pop-up / script blocking (existing)
@@ -23,20 +24,12 @@ animesaturn.cx##html > div[style*="pointer-events: none;"][style*="position: abs
 ! ======================================
 ! New rules to neutralize the obfuscated JS
 ! ======================================
-
-! Block inline scripts containing known obfuscation markers
 animesaturn.cx##script:contains(function\(lczxsusin\))
 animesaturn.cx##script:contains(c.#i6M)
-
-! Block specific obfuscated JS files by substring
 ||animesaturn.cx/*lrsazoxuowrudef*^$script
 ||animesaturn.cx/*bdqrqfot*^$script
-
-! Block popup scripts with obfuscated names
 ||animesaturn.cx/*otdayq*^$popup
 ||animesaturn.cx/*fuyqlazq*^$popup
-
-! Block known iframes and overlays
 animesaturn.cx##iframe[src*="oxuow"]
 animesaturn.cx##iframe[src*="eodubf"]
 animesaturn.cx##div[class*="overlay"]
@@ -45,12 +38,9 @@ animesaturn.cx##div[class*="popunder"]
 ! ======================================
 ! External script hosts (new)
 ! ======================================
-
-! Block any script coming from ccg90.com (and similar numeric paths)
 ||ccg90.com^$script,popup
 
 ! ======================================
 ! Generic ad‐domain blocking (simplified)
 ! ======================================
-! Block any request to domains beginning with “ad” and ending in “.com”
 ||ad*.com^$script,popup

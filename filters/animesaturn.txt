@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: AnimeSaturn filters EXT
-! Version: 1.1.1
-! Last modified: 05-06-2025 13:15:00
+! Version: 1.1.2
+! Last modified: 05-06-2025 13:30:00
 ! Expires: 55 days
 ! Homepage: https://github.com/ninjadidio15/Animesaturn-blocker
 
@@ -14,8 +14,7 @@ animesaturn.cx##.row.pt-2.pb-2
 animesaturn.cx##.alert.alert-saturn
 animesaturn.cx###footerdivfixed
 animesaturn.cx##html > div[style*="pointer-events: none;"][style*="position: absolute"]
-animesaturn.cx##div[style*="z-index: 2147483647"][style*="pointer-events: auto"]
-animesaturn.cx##div[style*="position: fixed"][style*="pointer-events"][style*="z-index"]
+animesaturn.cx##div[style*="position: fixed"][style*="pointer-events"]
 
 ! ======================================
 ! Pop-up / script blocking (existing)
@@ -27,6 +26,8 @@ animesaturn.cx##div[style*="position: fixed"][style*="pointer-events"][style*="z
 ! ======================================
 animesaturn.cx##script:contains(function\(lczxsusin\))
 animesaturn.cx##script:contains(c.#i6M)
+animesaturn.cx##script:contains(Object.defineProperties)
+animesaturn.cx##script:contains(window._)
 ||animesaturn.cx/*lrsazoxuowrudef*^$script
 ||animesaturn.cx/*bdqrqfot*^$script
 ||animesaturn.cx/*otdayq*^$popup
@@ -45,6 +46,6 @@ animesaturn.cx##div[class*="popunder"]
 ||sf960.com^$script,popup
 
 ! ======================================
-! Generic ad‐domain blocking (semplificato)
+! Generic ad-domain blocking (semplificato)
 ! ======================================
 ||ad*.com^$script,popup

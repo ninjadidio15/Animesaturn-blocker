@@ -51,4 +51,4 @@ animesaturn.cx##div[class*="popunder"]
 ! ======================================
 ! Wildcard regex for future random domains
 ! ======================================
-/https?:\/\/[a-z0-9]{6,}\.(?:com|net)\/.*\$script,popup/
+/https?:\/\/[a-z0-9]{4,14}\.(?:com|net)\/.*$script,popup
